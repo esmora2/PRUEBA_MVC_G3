@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1721489893893,
+    "name": "Springboot",
+    "description": "Springboot y Java",
+    "instructor": "Jaime Diaz"
+  },
+  {
+    "id": 1721493786512,
+    "name": "Next JS",
+    "description": "Aprende a utilizar Next JS",
+    "instructor": "Danilo Cruz A"
+  },
+  {
+    "id": 1721494289835,
+    "name": "React JS",
+    "description": "Curso de REACT",
+    "instructor": "Juan Torres"
+  },
+  {
+    "id": 1721634037660,
+    "name": "Python",
+    "description": "Ninguna",
+    "instructor": "Sheylee Enriquez"
+  }
+]
