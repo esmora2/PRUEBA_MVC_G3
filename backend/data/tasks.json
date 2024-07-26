@@ -4,14 +4,14 @@
     "title": "Venta",
     "description": "Venta de mercancía",
     "completed": true,
-    "userId": null
+    "userId": 0
   },
   {
     "id": 2,
     "title": "Comprar ",
     "description": "Comprar más mercancía",
-    "completed": true,
-    "userId": null
+    "completed": false,
+    "userId": 0
   },
   {
     "id": 3,

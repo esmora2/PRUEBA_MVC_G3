@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 const TaskList = ({ tasks, onDelete, onUpdate }) => {
     const [editTaskId, setEditTaskId] = useState(null);
-    const [editTask, setEditTask] = useState({ title: '', description: '', completed: false });
+    const [editTask, setEditTask] = useState({ title: '', description: '', completed: false, userId: '' });
 
     const handleEditClick = (task) => {
         setEditTaskId(task.id);
-        setEditTask({ title: task.title, description: task.description, completed: task.completed });
+        setEditTask({ title: task.title, description: task.description, completed: task.completed, userId: task.userId });
     };
 
     const handleSaveClick = (id) => {
@@ -40,6 +40,14 @@ const TaskList = ({ tasks, onDelete, onUpdate }) => {
                                 placeholder="Descripción"
                                 required
                             />
+                            <input
+                                name="userId"
+                                type="number"
+                                value={editTask.userId}
+                                onChange={handleChange}
+                                placeholder="User ID"
+                                required
+                            />
                             <label className='form-field'>
                                 Completo:
                                 <input
@@ -53,7 +61,7 @@ const TaskList = ({ tasks, onDelete, onUpdate }) => {
                         </>
                     ) : (
                         <>
-                            <span>{task.title} - {task.description}</span>
+                            <span>{task.description} - {task.completed ? 'Completado' : 'Pendiente'}</span>
                             <div className="button-container">
                                 <button onClick={() => handleEditClick(task)} className='lista2'>Editar</button>
                                 <button onClick={() => onDelete(task.id)} className='lista3'>Eliminar</button>
