@@ -19,7 +19,7 @@ router.post('/register', (req, res) => {
     const { username, password } = req.body;
     const userExists = users.some(user => user.username === username);
     if (userExists) {
-        return res.status(400).json({ message: 'User already exists' });
+        return res.status(400).json({ message: 'El usuario ya existe.' });
     }
     const newUser = {
         id: users.length + 1,
@@ -28,7 +28,7 @@ router.post('/register', (req, res) => {
     };
     users.push(newUser);
     saveUsers(users);
-    res.status(201).json({ message: 'User registered successfully' });
+    res.status(201).json({ message: 'El usuario se registro exitosamente' });
 });
 
 router.post('/login', (req, res) => {
@@ -38,11 +38,11 @@ router.post('/login', (req, res) => {
     const user = users.find(user => user.username === username);
     if (!user) {
         console.log("User not found"); // Log si el usuario no existe
-        return res.status(400).json({ message: 'Invalid credentials' });
+        return res.status(400).json({ message: 'Credenciales incorrectas' });
     }
     if (user.password !== password) {
         console.log("Invalid password"); // Log si la contraseña es incorrecta
-        return res.status(400).json({ message: 'Invalid credentials' });
+        return res.status(400).json({ message: 'Credenciales incorrectas' });
     }
     const token = jwt.sign({ id: user.id }, 'your_jwt_secret', { expiresIn: '1h' });
     res.json({ token });

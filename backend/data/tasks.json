@@ -1,23 +1,23 @@
 [
   {
+    "id": 1,
+    "title": "Venta",
+    "description": "Venta de mercancía",
+    "completed": true,
+    "userId": null
+  },
+  {
     "id": 2,
-    "title": "Grocery shopping",
-    "description": "Buy vegetables, fruits, and dairy products",
-    "completed": false,
-    "userId": 2
+    "title": "Comprar ",
+    "description": "Comprar más mercancía",
+    "completed": true,
+    "userId": null
   },
   {
     "id": 3,
-    "title": "Hola",
-    "description": "Complete a 30-minute workout session",
-    "completed": true,
-    "userId": 1
-  },
-  {
-    "id": 4,
-    "title": "MNuc",
-    "description": "fre",
+    "title": "Administrar",
+    "description": "Administrar el almacén",
     "completed": false,
-    "userId": 2
+    "userId": 0
   }
 ]

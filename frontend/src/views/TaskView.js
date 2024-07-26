@@ -32,9 +32,17 @@ const TaskView = ({ token }) => {
     };
 
     return (
-        <div>
-            <TaskForm token={token} onTaskCreated={handleTaskCreated} />
-            <TaskList tasks={tasks} onDelete={handleDelete} onUpdate={handleUpdate} />
+        <div className="container">
+            <header className="header">
+                <h1>Gestor de Tareas</h1>
+            </header>
+            <div className="content">
+                <div>
+                    <TaskForm token={token} onTaskCreated={handleTaskCreated} />
+                    <h3>Tareas agregadas:</h3>
+                    <TaskList tasks={tasks} onDelete={handleDelete} onUpdate={handleUpdate} />
+                </div>
+            </div>
         </div>
     );
 };

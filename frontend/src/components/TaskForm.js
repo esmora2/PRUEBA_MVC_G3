@@ -19,15 +19,20 @@ const TaskForm = ({ token, onTaskCreated }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input name="title" value={task.title} onChange={handleChange} placeholder="Title" required />
-            <input name="description" value={task.description} onChange={handleChange} placeholder="Description" required />
-            <input name="userId" value={task.userId} onChange={handleChange} placeholder="User ID" required />
-            <label>
-                Completo:
-                <input name="completed" type="checkbox" checked={task.completed} onChange={handleChange} />
-            </label>
-            <button type="submit">Añadir tarea</button>
+        <form onSubmit={handleSubmit} className="task-form">
+            <div className="form-field">
+                <label htmlFor="title">Nombre:</label>
+                <input id="title" name="title" value={task.title} onChange={handleChange} placeholder="Nombre de la tarea" required />
+            </div>
+            <div className="form-field">
+                <label htmlFor="description">Descripción:</label>
+                <input id="description" name="description" value={task.description} onChange={handleChange} placeholder="Descripción" required />
+            </div>
+            <div className="form-field">
+                <label htmlFor="completed">Completo:</label>
+                <input id="completed" name="completed" type="checkbox" checked={task.completed} onChange={handleChange} />
+            </div>
+            <button type="submit" className='agregar'>Añadir tarea</button>
         </form>
     );
 };

@@ -3,7 +3,7 @@ import UserView from '../views/UserView';
 
 const Login = () => {
     const handleLogin = (token) => {
-        // Handle login
+
     };
 
     return (

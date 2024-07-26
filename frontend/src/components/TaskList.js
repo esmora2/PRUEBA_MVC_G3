@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 const TaskList = ({ tasks, onDelete, onUpdate }) => {
     const [editTaskId, setEditTaskId] = useState(null);
-    const [editTask, setEditTask] = useState({ title: '', description: '', completed: false, userId: '' });
+    const [editTask, setEditTask] = useState({ title: '', description: '', completed: false });
 
     const handleEditClick = (task) => {
         setEditTaskId(task.id);
-        setEditTask({ title: task.title, description: task.description, completed: task.completed, userId: task.userId });
+        setEditTask({ title: task.title, description: task.description, completed: task.completed });
     };
 
     const handleSaveClick = (id) => {
@@ -30,26 +30,18 @@ const TaskList = ({ tasks, onDelete, onUpdate }) => {
                                 name="title"
                                 value={editTask.title}
                                 onChange={handleChange}
-                                placeholder="Title"
+                                placeholder="Nombre de la tarea"
                                 required
                             />
                             <input
                                 name="description"
                                 value={editTask.description}
                                 onChange={handleChange}
-                                placeholder="Description"
+                                placeholder="Descripción"
                                 required
                             />
-                            <input
-                                name="userId"
-                                type="number"
-                                value={editTask.userId}
-                                onChange={handleChange}
-                                placeholder="User ID"
-                                required
-                            />
-                            <label>
-                                Completed:
+                            <label className='form-field'>
+                                Completo:
                                 <input
                                     name="completed"
                                     type="checkbox"
@@ -57,15 +49,17 @@ const TaskList = ({ tasks, onDelete, onUpdate }) => {
                                     onChange={handleChange}
                                 />
                             </label>
-                            <button onClick={() => handleSaveClick(task.id)}>Guardar</button>
+                            <button onClick={() => handleSaveClick(task.id)} className='lista'>Guardar</button>
                         </>
                     ) : (
                         <>
-                            <span>{task.title} - {task.description} - {task.userId}</span>
-                            <button onClick={() => handleEditClick(task)}>Editar</button>
+                            <span>{task.title} - {task.description}</span>
+                            <div className="button-container">
+                                <button onClick={() => handleEditClick(task)} className='lista2'>Editar</button>
+                                <button onClick={() => onDelete(task.id)} className='lista3'>Eliminar</button>
+                            </div>
                         </>
                     )}
-                    <button onClick={() => onDelete(task.id)}>Eliminar</button>
                 </li>
             ))}
         </ul>

@@ -18,27 +18,36 @@ const RegisterView = () => {
     };
 
     return (
-        <div>
-            <form onSubmit={handleRegister}>
-                <input
-                    name="username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    placeholder="Username"
-                />
-                <input
-                    type="password"
-                    name="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
-                />
-                <button type="submit">Registrarse</button>
-            </form>
-            {message && <p>{message}</p>}
-            <p>
-             Ya tienes una cuenta? <Link href="/">Ingresa</Link>
-            </p>
+        <div className="container">
+            <header className="header">
+                <h1>Registro de Usuario</h1>
+            </header>
+            <div className="content">
+                <form onSubmit={handleRegister}>
+                    <p>Usuario:
+                        <input
+                            name="username"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            placeholder="Username"
+                        />
+                    </p>
+                    <p>Contraseña:
+                        <input
+                            type="password"
+                            name="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            placeholder="Password"
+                        />
+                    </p>
+                    <button type="submit" className="ingresar">Registrarse</button>
+                </form>
+                {message && <p>{message}</p>}
+                <p>
+                    ¿Ya tienes una cuenta? <Link href="/">Ingresar</Link>
+                </p>
+            </div>
         </div>
     );
 };
