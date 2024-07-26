@@ -1,12 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "Venta",
-    "description": "Venta de mercancía",
-    "completed": true,
-    "userId": null
-  },
-  {
     "id": 2,
     "title": "Comprar ",
     "description": "Comprar más mercancía",

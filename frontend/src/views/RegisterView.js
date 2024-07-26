@@ -22,6 +22,7 @@ const RegisterView = () => {
             <header className="header">
                 <h1>Registro de Usuario</h1>
             </header>
+            <div className="left">
             <div className="content">
                 <form onSubmit={handleRegister}>
                     <p>Usuario:
@@ -44,10 +45,16 @@ const RegisterView = () => {
                     <button type="submit" className="ingresar">Registrarse</button>
                 </form>
                 {message && <p>{message}</p>}
-                <p>
-                    ¿Ya tienes una cuenta? <Link href="/">Ingresar</Link>
-                </p>
+                <div className="right">
+                <img src="/images/registro.png" alt="imagen" />
+                </div>
             </div>
+            
+            </div>
+                <p>
+                    ¿Ya tienes una cuenta? <Link href="/" className='registro'>Ingresar</Link>
+                </p>
+                
         </div>
     );
 };
