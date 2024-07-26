@@ -20,8 +20,10 @@ const CourseView: React.FC<CourseViewProps> = ({ courses, onDelete }) => {
         <div style={{marginLeft: '50px', backgroundColor: '#E4F2F5', marginRight: '50px', borderRadius: '50px'}}>       
             {courses.map((course) => (
                 <div key={course.id} style={{marginLeft: '50px'}}>
+                    <h2>ID Tarea: </h2>
+                    <p>{course.id}</p>
                     <h2>{course.name}</h2>
-                    <p>{course.description}</p>
+                    <p>Fecha:{course.description}</p>
                     <p>Instructor: {course.instructor}</p>
                     <Link href={`/editCourse?id=${course.id}`} legacyBehavior>
                         <a style={{backgroundColor: 'white'}}>Editar</a>

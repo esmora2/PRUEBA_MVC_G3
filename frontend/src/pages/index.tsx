@@ -5,13 +5,13 @@ const HomePage: React.FC = () => {
     return (
         <div className="container">
             <header className="header">
-                <h1>Bienvenido a la Plataforma de Cursos</h1>
+                <h1>Sistema de Gestion de Tareas</h1>
                 <nav className="nav">
                     <Link href="/courses">
-                        Ver Cursos
+                        Ver Tareas
                     </Link>
                     <Link href="/addCourses">
-                         Curso
+                         Agregar Tarea
                     </Link>
                     <Link href="/enrollCourse">
                         Inscribirse a un Curso
