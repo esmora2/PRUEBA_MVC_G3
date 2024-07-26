@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TaskController from '../controllers/TaskController';
 import TaskList from '../components/TaskList';
-import TaskForm from '../components/TaskForm';
 
 const TaskView = ({ token }) => {
     const [tasks, setTasks] = useState([]);
@@ -31,6 +30,11 @@ const TaskView = ({ token }) => {
         fetchTasks();
     };
 
+    const handleAdd = async (newTask) => {
+        await TaskController.createTask(newTask, token);
+        fetchTasks();
+    };
+
     return (
         <div className="container">
             <header className="header">
@@ -38,9 +42,8 @@ const TaskView = ({ token }) => {
             </header>
             <div className="content">
                 <div>
-                    <TaskForm token={token} onTaskCreated={handleTaskCreated} />
-                    <h3>Tareas agregadas:</h3>
-                    <TaskList tasks={tasks} onDelete={handleDelete} onUpdate={handleUpdate} />
+                <TaskList tasks={tasks} onDelete={handleDelete} onUpdate={handleUpdate} onAdd={handleAdd} />
+                    
                 </div>
             </div>
         </div>

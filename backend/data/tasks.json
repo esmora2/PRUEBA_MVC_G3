@@ -1,10 +1,20 @@
 [
   {
+<<<<<<< HEAD
+=======
+    "id": 1,
+    "title": "Venta",
+    "description": "Venta de mercancía",
+    "completed": true,
+    "userId": 4
+  },
+  {
+>>>>>>> f6e9b7077e7be8a988278156e13ef390c3e28bcb
     "id": 2,
     "title": "Comprar ",
     "description": "Comprar más mercancía",
     "completed": true,
-    "userId": null
+    "userId": 0
   },
   {
     "id": 3,
