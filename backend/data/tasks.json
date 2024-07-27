@@ -1,37 +1,16 @@
 [
   {
-    "id": 1,
-    "title": "Venta",
-    "description": "Venta de mercancía",
-    "completed": true,
-    "userId": 4
+      "id": 1,
+      "title": "Tarea 1",
+      "description": "Descripción de la tarea 1",
+      "completed": false,
+      "userId": 1
   },
   {
-    "id": 2,
-    "title": "Comprar ",
-    "description": "Comprar más mercancía",
-    "completed": true,
-    "userId": 0
-  },
-  {
-    "id": 4,
-    "title": "Administrar",
-    "description": "Administrar el almacén",
-    "completed": false,
-    "userId": 1
-  },
-  {
-    "id": 5,
-    "title": "Administrar",
-    "description": "Administrar el almacén",
-    "completed": true,
-    "userId": 1
-  },
-  {
-    "id": 6,
-    "title": "Administrar",
-    "description": "Administrar el almacén",
-    "completed": true,
-    "userId": 1
+      "id": 2,
+      "title": "Tarea 2",
+      "description": "Descripción de la tarea 2",
+      "completed": true,
+      "userId": 2
   }
 ]

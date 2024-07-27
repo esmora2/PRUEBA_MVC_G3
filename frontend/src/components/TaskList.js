@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 const TaskList = ({ tasks, onDelete, onUpdate, onAdd }) => {
     const [editTaskId, setEditTaskId] = useState(null);
     const [editTask, setEditTask] = useState({ title: '', description: '', completed: false, userId: '' });
-    const [showForm, setShowForm] = useState(false); 
+    const [showForm, setShowForm] = useState(false); // Estado para controlar la visibilidad del formulario
     const [newTask, setNewTask] = useState({ title: '', description: '', completed: false, userId: '' });
 
     const handleEditClick = (task) => {
@@ -35,7 +36,11 @@ const TaskList = ({ tasks, onDelete, onUpdate, onAdd }) => {
     };
 
     return (
+        
         <div>
+            <header className="header">
+                <h1>Gestor de Tareas - JESA</h1>
+            </header>
             <button onClick={() => setShowForm(!showForm)} className="agregar">Agregar Tarea</button>
             {showForm && (
                 <div className="task-form">
