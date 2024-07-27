@@ -234,10 +234,10 @@ h2 {
 }
 
 .task-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
 .task-card {
@@ -254,17 +254,52 @@ h2 {
     align-items: flex-start;
 }
 
+.usuario{
+    margin-left: 70px;
+}
+
 .edit-form {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50%;
-    background-color: #c2c2c2;
+    background-color: #f9f9f9;
     padding: 2rem;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
     z-index: 1000;
+}
+
+.edit-form input, .edit-form label {
+    width: 80%;
+    margin-bottom: 1rem; /* Añade espacio entre los campos */
+}
+
+.edit-form input {
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    font-size: 1rem; 
+}
+
+.edit-form button {
+    width: auto;
+    padding: 0.7rem 1.5rem; 
+    margin-top: 1rem; /* Añade espacio en la parte superior */
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    background-color: #4caf50;
+    color: white;
+    font-family: 'Lucida Bright', Arial, monospace;
+    font-size: 1rem; /* Aumenta el tamaño de la fuente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Añade una transición suave */
+}
+
+.edit-form button:hover {
+    background-color: #45a049; 
 }
 
 .lista:hover{

@@ -23,11 +23,7 @@ const UserView = ({ onLogin }) => {
             <header className="header">
                 <h1>Gestor de Tareas - JESA</h1>
             </header>
-            <nav className="nav">
-                <Link href="/">Inicio</Link>
-                <Link href="/">Información</Link>
-                <Link href="/">Contacto</Link>
-            </nav>
+            
             <div className="content">
                 <div className="left">
                     <form onSubmit={handleLogin}>
